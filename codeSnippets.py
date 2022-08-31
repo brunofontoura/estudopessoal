@@ -30,3 +30,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support import expected_conditions as EC
 
+#Instalação e configuração remota de Firefox + Geckodriver por script
+from selenium import webdriver
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from webdriver_manager.firefox import GeckoDriverManager
+
+driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
